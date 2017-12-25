@@ -1,5 +1,6 @@
 <template>
   <a
+    class=""
     v-bind:href="href"
     v-bind:class="{ active: isActive }"
     v-on:click="go"
@@ -37,8 +38,11 @@
   }
 </script>
 
-<style scoped>
-  .active {
+<style>
+  a {
+    text-decoration: none;
+  }
+  a:active {
     color: cornflowerblue;
   }
 </style>

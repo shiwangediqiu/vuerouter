@@ -1,6 +1,6 @@
 <template>
   <main-layout>
-    <p>Welcome home</p>
+    <p>Test page2</p>
   </main-layout>
 </template>
 
