@@ -31,10 +31,12 @@
 
 <script>
   import moviepages from '../pages/movie.vue'
+  import VLink from '../components/VLink.vue'
 
   export default {
     components: {
-      moviepages
+      moviepages,
+      VLink
     },
 
     data() {

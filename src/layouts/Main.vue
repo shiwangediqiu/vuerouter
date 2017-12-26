@@ -23,6 +23,19 @@
 </script>
 
 <style>
+  .head {
+    border: solid 1px white;
+    height: auto;
+    width: 100%;
+    font-size: 4em;
+    background-color: #e1e1e1;
+    padding-top: 12px;
+        }
+  .head>span {
+    border: solid 1px #e1e1e1;
+    text-align: center;
+    margin-left: 30%;
+        } 
   .ul {
     border-bottom: 1px solid #e1e1e1;
     height: auto;
