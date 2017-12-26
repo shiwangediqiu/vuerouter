@@ -1,11 +1,11 @@
 <template>
   <div>
     <ul class="ul">
-      <li class="li"><v-link href="/0-50">0-50</v-link></li>
-      <li class="li"><v-link href="/51-100">51-100</v-link></li>
-      <li class="li"><v-link href="/101-150">101-150</v-link></li>
-      <li class="li"><v-link href="/151-200">151-200</v-link></li>
-      <li class="li"><v-link href="/201-250">201-250</v-link></li>
+      <li class="li"><v-link href="/movie">电影</v-link></li>
+      <li class="li"><v-link href="/book">书籍</v-link></li>
+      <li class="li"><v-link href="/television">电视</v-link></li>
+      <li class="li"><v-link href="/music">音乐</v-link></li>
+      <li class="li"><v-link href="/city">同城</v-link></li>
     </ul>
 
     <slot></slot>
