@@ -1,16 +1,17 @@
 <template>
   <main-layout>
-    <div class="main">
-    <p>rank 0-50</p> 
+    <div class="main"> 
       <ul>
         <li v-for="(article,index) in articles">
+          <h3>第{{index+1}}名</h3>
           <p>电影名：{{article.title}}</p>
-          <p>上映时间：{{article.year}}</p>
-          <p>分类：{{article.genres[0]}}、{{article.genres[1]}}</p>
+          <p>上映时间：{{article.year}}  分类：{{article.genres[0]}}、{{article.genres[1]}}</p>
+          <p><span>导演：</span><span v-for='article2 in article.directors'>{{article2.name}}</span></p>
+          <p><span>主演：</span><span v-for="(article3,index) in article.casts">{{article3.name}}<span
+              v-if='index < article.casts.length -1'>/</span></span></p>
           <p>评分：最高--{{article.rating.max}}，最低--{{article.rating.min}}，平均--{{article.rating.average}}</p>
-          <p><img :src="article.images.medium"></p>
-          <p><span v-for='article2 in articles.directors'>{{article2.name}}</span></p> 
-        </li><br />
+          <p><img :src="article.images.medium"></p> 
+        </li>
       </ul>
     </div>
   </main-layout>
@@ -26,8 +27,7 @@
 
     data() {
     return {
-      articles: [],
-      year: []
+      articles: []
       }
     },
   
@@ -72,6 +72,8 @@
     .main>ul>li {
     padding-top: 0px;
     list-style: none;
+    border-bottom: solid 3px red;
+    margin: 10px;
     }
     li:hover {
     color: black;

@@ -1,7 +1,6 @@
 <template>
   <main-layout>
-    <div class="main">
-    <p>rank 51-100</p>  
+    <div class="main"> 
       <ul>
         <li v-for="article in articles">
           {{article.title}}

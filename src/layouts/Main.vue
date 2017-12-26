@@ -39,7 +39,7 @@
     padding-top: 20px;
     list-style: none;
         }
-  li:hover {
+  .li:hover {
     color: black;
     border-bottom: solid 3px black;
         }        
