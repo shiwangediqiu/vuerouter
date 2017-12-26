@@ -1,11 +1,18 @@
 <template>
   <main-layout>
     <div class="main"> 
-      <ul>
-        <li v-for="article in articles">
-          {{article.title}}
-        </li>
-      </ul>
+      <div>
+        <div v-for="(article,index) in articles" class="list">
+          <h3>第{{index+51}}名</h3>
+          <p>电影名：{{article.title}}</p>
+          <p>上映时间：{{article.year}}  分类：{{article.genres[0]}}、{{article.genres[1]}}</p>
+          <p><span>导演：</span><span v-for='article2 in article.directors'>{{article2.name}}</span></p>
+          <p><span>主演：</span><span v-for="(article3,index) in article.casts">{{article3.name}}<span
+              v-if='index < article.casts.length -1'>/</span></span></p>
+          <p>评分：最高--{{article.rating.max}}，最低--{{article.rating.min}}，平均--{{article.rating.average}}</p>
+          <p><img :src="article.images.medium"></p> 
+        </div>
+      </div>
     </div>
   </main-layout>
 </template>
@@ -25,7 +32,7 @@
     },
   
     mounted: function() {
-    this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=50', {}, {
+    this.$http.jsonp('https://api.douban.com/v2/movie/top250?start=50&count=50', {}, {
         headers: {
  
         },
@@ -41,29 +48,33 @@
         console.log(response)
     });
   }
+}
 
-  }
 </script>
 
+
+
 <style>
-    .main>ul {
-    height: 100px;
-    width: 80%;
-    font-size: 20px;
-    display: flex;
+    .main {
+      border: solid 1px #c8ffff;
+      height: auto;
+      width: 40%;
+      margin: auto;
+      text-align: center;
+      font-size: 20px;
+      color: #969696;
+      background-color: #c8ffff;
+    }
+    .list {
+    width: 75%;  
+    padding-top: 0px;
+    list-style: none;
+    margin:20px auto;
     text-align: center;
-    margin: auto;
-    color: #b4b4b4;
-    list-style: none;
+    box-shadow:20px 0px 30px 10px #abcdef  inset;
+    padding: 10px 0;
     }
-    .main>li {
-    flex: 1;
-    padding-top: 20px;
-    list-style: none;
-    display: inline-block;
-    }
-    li:hover {
+    .list:hover {
     color: black;
-    border-bottom: solid 3px black;
     }
 </style>

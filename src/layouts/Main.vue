@@ -25,9 +25,9 @@
 <style>
   .ul {
     border-bottom: 1px solid #e1e1e1;
-    height: 100px;
+    height: auto;
     width: 80%;
-    font-size: 50px;
+    font-size: 3em;
     display: flex;
     text-align: center;
     margin: auto;
