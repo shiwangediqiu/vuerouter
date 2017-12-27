@@ -1,8 +1,7 @@
 <template>
-  <main-layout>
     <div>
       <div class="head">
-        <<span>热门电影排行榜top250</span>
+        <<span>高评分电影排行榜top250</span>
       </div>
       <ul class="ul">
         <li class="li"><v-link href="/0-50">0-50</v-link></li>
@@ -13,7 +12,7 @@
       </ul>
       <slot></slot>
        
-      <div>
+      <div class="main">
         <div v-for="(article,index) in articles" class="list">
           <h3>第{{index+151}}名</h3>
           <p>电影名：{{article.title}}</p>
@@ -26,7 +25,6 @@
         </div>
       </div>
     </div>
-  </main-layout>
 </template>
 
 <script>

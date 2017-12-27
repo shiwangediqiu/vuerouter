@@ -1,20 +1,20 @@
 <template>
     <div>
       <div class="head">
-        <<span>高评分电影排行榜top250</span>
+        <<span>热映电影排行榜</span>
       </div>
-      <ul class="ul">
-        <li class="li"><v-link href="/0-50">0-50</v-link></li>
-        <li class="li"><v-link href="/51-100">51-100</v-link></li>
-        <li class="li"><v-link href="/101-150">101-150</v-link></li>
-        <li class="li"><v-link href="/151-200">151-200</v-link></li>
-        <li class="li"><v-link href="/201-250">201-250</v-link></li>
+      <div>
+        <ul class="ul">
+        <li class="li"><v-link href="/hot1">第1页</v-link></li>
+        <li class="li"><v-link href="/hot2">第2页</v-link></li>
       </ul>
+      </div>      
+
       <slot></slot> 
 
       <div class="main">
         <div v-for="(article,index) in articles" class="list">
-          <h3>第{{index+1}}名</h3>
+          <h3>第{{index+21}}名</h3>
           <p>电影名：{{article.title}}</p>
           <p>上映时间：{{article.year}}  分类：{{article.genres[0]}}、{{article.genres[1]}}</p>
           <p><span>导演：</span><span v-for='article2 in article.directors'>{{article2.name}}</span></p>
@@ -44,7 +44,7 @@
     },
   
     mounted: function() {
-    this.$http.jsonp('https://api.douban.com/v2/movie/top250?start=0&count=50', {}, {
+    this.$http.jsonp('https://api.douban.com/v2/movie/in_theaters?count=20&start=20', {}, {
         headers: {
  
         },
@@ -89,6 +89,19 @@
     .list:hover {
     color: black;
     }
+  .head {
+    border: solid 1px white;
+    height: auto;
+    width: 100%;
+    font-size: 4em;
+    background-color: #e1e1e1;
+    padding-top: 12px;
+        }
+  .head>span {
+    border: solid 1px #e1e1e1;
+    text-align: center;
+    margin-left: 30%;
+        }    
       .ul {
     border-bottom: 1px solid #e1e1e1;
     height: auto;
