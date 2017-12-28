@@ -6,5 +6,7 @@ export default {
   '/201-250': '201-250',
   '/movie': 'movie',
   '/hot1': 'hot1',
-  '/hot2': 'hot2'
+  '/hot2': 'hot2',
+  '/coming1': 'coming1',
+  '/coming2': 'coming2'
 }

@@ -48,7 +48,7 @@
         <div class="body">
           <div class="bodytop">
             <div id="topleft">即将上映</div>
-            <div id="topright"><span><v-link href="/0-50">更多></v-link></span></div>
+            <div id="topright"><span><v-link href="/coming1">更多></v-link></span></div>
           </div>
           <div class="bodyitem">
             <div class="item">
@@ -99,12 +99,12 @@
               <h1>豆瓣top250</h1>
               <p>8分以上好电影</p>
             </v-link>
-            <v-link href='/0-50' class="item" style="
+            <v-link href='/hot1' class="item" style="
             background-color: #ed3f62">
               <h1>热映榜</h1>
               <p>大家都在看</p>
             </v-link>            
-            <v-link href='/0-50' class="item" style="
+            <v-link href='/coming1' class="item" style="
             background-color: #3cf0a4">
               <h1>即将上映</h1>
               <p>你所等待的</p>
