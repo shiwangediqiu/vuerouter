@@ -128,10 +128,12 @@
     },
     data() {
       return {
+        movieList: [],
         movieList1: [],
         movieList2: [],
         movieList3: [],
         movieList4: [],
+        movieSoonList: [],
         movieSoonList1: [],
         movieSoonList2: [],
         movieSoonList3: [],
@@ -186,7 +188,7 @@
           this.movieList4 = response.data.subjects
         }, function(response) {
           console.log(response)
-        });
+        });        
 
       },
       
@@ -217,8 +219,9 @@
           console.log(response)
         }, response => {
 
-        });                
-      }
+        });
+                
+      }, 
     }
   }
 </script>

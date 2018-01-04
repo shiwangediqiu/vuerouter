@@ -21,7 +21,9 @@
           <p><span>主演：</span><span v-for="(article3,index) in article.casts">{{article3.name}}<span
               v-if='index < article.casts.length -1'>/</span></span></p>
           <p>评分：最高--{{article.rating.max}}，最低--{{article.rating.min}}，平均--{{article.rating.average}}</p>
-          <p><img :src="article.images.medium"></p> 
+          <!--<child movieid = "123"></child>-->
+          <p><img :src="article.images.medium"></p>
+          <v-link href="/movieDetail">more</v-link>
         </div>
       </div>
     </div>
@@ -30,11 +32,13 @@
 <script>
   import moviepages from '../pages/movie.vue'
   import VLink from '../components/VLink.vue'
+  import child from '../pages/movieDetail.vue'
 
   export default {
     components: {
       moviepages,
-      VLink
+      VLink,
+      child
     },
 
     data() {

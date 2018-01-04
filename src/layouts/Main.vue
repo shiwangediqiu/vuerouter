@@ -9,7 +9,12 @@
     </ul>
 
     <slot></slot>
+
+    <div class="welcome">
+      <h1>welcome</h1>
     </div>
+
+  </div>
 </template>
 
 <script>
@@ -23,6 +28,12 @@
 </script>
 
 <style>
+  .welcome {
+    font-size: 1em;
+    color: red;
+    margin: 1em auto;
+    text-align: center;
+  }
   .head {
     border: solid 1px white;
     height: auto;
